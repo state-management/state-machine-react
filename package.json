@@ -30,8 +30,8 @@
     "tsc-ver": "tsc -version"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "@state-management/simple-state-machine": "^1.0.0"
+    "@state-management/simple-state-machine": "^1.0.3",
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
