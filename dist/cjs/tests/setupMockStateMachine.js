@@ -11,7 +11,6 @@ const setupMockStateMachine = ({ defaultValue = 0, dispatchImplementation = jest
         const actual = jest.requireActual('simple-state-machine');
         return Object.assign(Object.assign({}, actual), { StateMachine: {
                 getInstance: jest.fn(() => {
-                    console.log("********* mock get instance called******* ");
                     return mockStateMachine;
                 }),
             } });
