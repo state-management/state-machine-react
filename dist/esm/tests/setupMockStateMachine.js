@@ -4,8 +4,8 @@ export const setupMockStateMachine = ({ defaultValue = 0, dispatchImplementation
         getLatest: jest.fn((key) => defaultValue),
         dispatch: dispatchImplementation
     };
-    jest.mock('simple-state-machine', () => {
-        const actual = jest.requireActual('simple-state-machine');
+    jest.mock('@state-management/simple-state-machine', () => {
+        const actual = jest.requireActual('@state-management/simple-state-machine');
         return Object.assign(Object.assign({}, actual), { StateMachine: {
                 getInstance: jest.fn(() => {
                     return mockStateMachine;
