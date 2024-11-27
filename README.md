@@ -5,15 +5,50 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **state-machine-react** is a React-specific wrapper for the core library, [simple-state-machine](https://github.com/state-management/simple-state-machine). 
-It provides React hooks for integrating with the state machine and a utility for simplifying unit testing of components using the state machine.
+It provides React hooks for integrating the `simple-state-machine` into React applications. And a utility for simplifying unit testing of components using the state machine.
 You can find the complete documentation of the core library, here:
 [Simple State Machine Documentation](https://github.com/state-management/simple-state-machine?tab=readme-ov-file#simple-state-machine)
 
+## About This Project
+
+Managing state in React applications can often be complex and cumbersome, especially when dealing with global or shared state. 
+**state-machine-react** simplifies this by combining the power of a state machine with React's modern hooks API. This library:
+- Provides the `fromState` hook to observe and react to state changes.
+- Offers the `useDispatcher` hook to dispatch state-changing commands which encapsulate business logic .
+- Includes `setupMockStateMachine` to make unit testing with the state machine easier.
+
+This project is part of the **state-management** suite, which includes:
+- [simple-state-machine](https://github.com/state-management/simple-state-machine): The core state management library.
+- [state-machine-react](https://github.com/state-management/state-machine-react): The React wrapper for `simple-state-machine`.
+- [ngx-state-machine](https://github.com/state-management/ngx-state-machine): The Angular wrapper for `simple-state-machine`.
+
+By decoupling state management logic from UI components, **state-machine-react** promotes cleaner, more maintainable, and testable React code.
+Since the state can be modified from within a Command only, this will result in business logic moving out of UI components into command classes.
+
+---
 
 ## Features
-- **`fromState`**: A React hook to subscribe to a specific state in the state machine.
-- **`useDispatcher`**: A React hook for dispatching commands to the state machine.
-- **`setupMockStateMachine`**: A utility for mocking the state machine during unit testing.
+
+### **Traceability**:
+This **single most important feature** that we wanted to design correctly is traceability of code.
+When trying to identify an issue, we should be able to go through the code, and identify the block causing the issue, without having to open ten different files.
+We should be able to use the  IDE's "find references" or even the simple Find(Ctrl + F) feature to quickly identify what `StateKeys` are changed by which `Commands`.
+
+This is invaluable while identifying issues in code.  This also reduces the dependency on debugging tools and time spent in debugging.
+
+***Most importantly*** the state management code looks a lot less scary, it is easy to read, and it is very easy to change and unit test.
+
+### The Important Technical Features:
+- **React Hooks**:
+    - `fromState`: Subscribe to and observe changes in the global state.
+    - `useDispatcher`: Dispatch commands to modify global state.  Commands contain the business logic.  And modify state as part of execution of business logic.
+
+- **Unit Testing Utilities**:
+    - `setupMockStateMachine`: Simplify mocking the state machine during component tests.
+
+- **Integration with simple-state-machine**:
+    - Leverage the powerful state management capabilities of `simple-state-machine` and its Command class which encapsulates the business logic, keeping the UI code clean.
+
 
 ## Installation
 
@@ -28,6 +63,7 @@ yarn add @state-management/state-machine-react
 
 ## Usage
 
+Here is a sample project that you can clone 
 
 ### StateKeys.constants.ts
 Create a constants file to store all state keys, for easy tracing of state changes in application
