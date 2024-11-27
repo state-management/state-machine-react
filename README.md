@@ -28,7 +28,6 @@ Since the state can be modified from within a Command only, this will result in 
 ### Implementations Example
 - [Sample React project](https://github.com/state-management/react-example) that you can clone. It is a fully working example with unit tests, showcasing the use of `state-machine-react` wrapper.
 
----
 
 ## Features
 ###### *State management code, that is lot less scary, easy to read, easy to trace, and very easy to change and unit test.*
