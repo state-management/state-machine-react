@@ -1,6 +1,6 @@
 # state-machine-react
 
-[![npm version](https://badge.fury.io/js/@state-management%2Fsimple-state-machine.svg)](https://www.npmjs.com/package/@state-management/state-machine-react)
+[![npm version](https://badge.fury.io/js/@state-management%2Fstate-machine-react.svg)](https://www.npmjs.com/package/@state-management/state-machine-react)
 [![Build Status](https://github.com/state-management/state-machine-react/actions/workflows/build.yml/badge.svg)](https://github.com/state-management/state-machine-react/actions)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
