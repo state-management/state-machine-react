@@ -166,9 +166,9 @@ The `fromState` hook subscribes to the state associated with the provided `State
 |-----------|----------------|----------------------------------------------|
 | `key`     | `StateKey<T>`  | The key for the state to subscribe to.       |
 
-| Returns    | Type            | Description                                 |
-|------------|-----------------|---------------------------------------------|
-| `T | undefined` | The current value for the key or `undefined`. |
+| Returns | Type            | Description                                   |
+|---------|-----------------|-----------------------------------------------|
+| T       | T or undeifined | The current value for the key or `undefined`. |
 
 **Example**:
 ```typescript
@@ -209,10 +209,10 @@ const ResetCounterButton: React.FC = () => {
 
 The `setupMockStateMachine` utility simplifies unit testing by providing a mocked implementation of the state machine. This allows you to simulate state changes and command dispatching in tests.
 
-| Parameter             | Type                     | Default     | Description                                      |
-|-----------------------|--------------------------|-------------|--------------------------------------------------|
-| `defaultValue`        | `any`                   | `0`         | The default value returned by `getLatest`.      |
-| `dispatchImplementation` | `jest.Mock`          | `jest.fn()` | Custom mock implementation for `dispatch`.      |
+| Parameter                | Type                     | Default     | Description                                 |
+|--------------------------|--------------------------|-------------|---------------------------------------------|
+| `defaultValue`           | `any`                   | `0`         | The default value returned by `getLatest`.  |
+| `dispatchImplementation` | `jest.Mock`          | `jest.fn()` | Custom mock implementation for `dispatch`.  |
 
 | Returns              | Type             | Description                          |
 |----------------------|------------------|--------------------------------------|
@@ -224,7 +224,7 @@ import { setupMockStateMachine } from '@state-management/state-machine-react/tes
 
 // Set up a mocked state machine
 const mockStateMachine = setupMockStateMachine({
-    defaultValue: 42, // Default state value
+    defaultValue: 42,
     dispatchImplementation: jest.fn((command) => console.log('Dispatched:', command)),
 });
 
@@ -236,8 +236,8 @@ mockStateMachine.getLatest.mockImplementation((key) => {
 
 // Mock onChange method to simulate subscription
 mockStateMachine.onChange.mockImplementation((key, callback) => {
-    callback(42); // Trigger callback with mocked value
-    return { unsubscribe: jest.fn() }; // Mock subscription cleanup
+    callback(42); 
+    return { unsubscribe: jest.fn() }; 
 });
 
 // Use mockStateMachine in your tests
