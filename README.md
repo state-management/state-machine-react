@@ -1,6 +1,10 @@
 # state-machine-react
 
-**state-machine-react** is a React-specific wrapper for the core library, [simple-state-machine](https://github.com/your-org/simple-state-machine). 
+[![npm version](https://badge.fury.io/js/@state-management%2Fsimple-state-machine.svg)](https://www.npmjs.com/package/@state-management/state-machine-react)
+[![Build Status](https://github.com/state-management/state-machine-react/actions/workflows/build.yml/badge.svg)](https://github.com/state-management/state-machine-react/actions)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+**state-machine-react** is a React-specific wrapper for the core library, [simple-state-machine](https://github.com/state-management/simple-state-machine). 
 It provides React hooks for integrating with the state machine and a utility for simplifying unit testing of components using the state machine.
 You can find the complete documentation of the core library, here:
 [Simple State Machine Documentation](https://github.com/state-management/simple-state-machine?tab=readme-ov-file#simple-state-machine)

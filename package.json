@@ -27,10 +27,11 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
     "build": "npm run build:cjs && npm run build:esm && npm run build:types",
     "clean": "rm -rf dist",
-    "tsc-ver": "tsc -version"
+    "tsc-ver": "tsc -version",
+    "test": "jest --passWithNoTests"
   },
   "peerDependencies": {
-    "@state-management/simple-state-machine": "^1.0.3",
+    "@state-management/simple-state-machine": "^1.0.4",
     "react": "^18.3.1"
   },
   "devDependencies": {
