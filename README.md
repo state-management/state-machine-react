@@ -38,7 +38,8 @@ export const CounterKey = new StateKey<number>('Counter');
 ### `useDispatcher`
 The `useDispatcher` hook provides a simple way to dispatch commands to the state machine. The commands contain the business logic.  This allows you to `separate business logic` from UI code.  The commands update the state as part of their execution.
 ###### Note: Only Commands can update the global state.
-#### Example
+
+#### Create a command to dispatch
 ```typescript
 import React from 'react';
 import { Command } from '@state-management/simple-state-machine';
@@ -55,8 +56,9 @@ class IncrementCounterCommand extends Command<number> {
 }
 ```
 
-The application code, dispatches commands to execute the business logic and update state.
-#### Example
+
+#### Dispatch the command
+The application code dispatches commands to execute the business logic and update state.
 ```typescript
 import React from 'react';
 import { IncrementCounterCommand } from 'IncrementCounterCommand';
@@ -75,8 +77,7 @@ export const CounterControls: React.FC = () => {
 };
 ```
 
-The application code, can also use the `UpdateStateCommand` for quick, one-off change to a state without creating a new Command class.
-#### Example
+#### `UpdateStateCommand` for Quick, one-off state change, without creating a new Command
 ```typescript
 import React from 'react';
 import { UpdateStateCommand, useDispatcher }  from '@state-management/state-machine-react';
