@@ -1,7 +1,7 @@
 {
-  "name": "state-machine-react",
+  "name": "@state-management/state-machine-react",
   "version": "1.0.0",
-  "description": "React wrapper for simple-state-machine, provides fromStateMachine and useStateMachineDispatch hooks",
+  "description": "React wrapper for simple-state-machine, provides fromState and useDispatcher hooks and unit test fixtures",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build:cjs": "tsc --project tsconfig.cjs.json",
@@ -29,7 +30,8 @@
     "tsc-ver": "tsc -version"
   },
   "peerDependencies": {
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "@state-management/simple-state-machine": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
@@ -37,7 +39,23 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
-    "@types/jest": "^27.5.2",
-    "simple-state-machine": "file:../simple-state-machine/simple-state-machine-1.0.0.tgz"
+    "@types/jest": "^27.5.2"
+  },
+  "keywords": [
+    "state-management",
+    "command-pattern",
+    "typescript",
+    "rxjs",
+    "react",
+    "react-native"
+  ],
+  "author": "Gopakumar Nair",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/state-management/state-machine-react.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

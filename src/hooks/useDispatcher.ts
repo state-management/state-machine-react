@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { Command, StateMachine } from 'simple-state-machine';
+import { Command, StateMachine } from '@state-management/simple-state-machine';
 
 /**
  * Custom hook for dispatching commands in the state machine.

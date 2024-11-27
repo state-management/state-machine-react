@@ -1,4 +1,4 @@
-import { StateMachine } from 'simple-state-machine';
+import { StateMachine } from '@state-management/simple-state-machine';
 
 type MockStateMachineConfig = {
     defaultValue?: any;
@@ -21,7 +21,6 @@ export const setupMockStateMachine = ({
             ...actual,
             StateMachine: {
                 getInstance: jest.fn(() => {
-                    console.log("********* mock get instance called******* ")
                     return mockStateMachine;
                 }),
             },

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {StateKey, StateMachine} from 'simple-state-machine';
+import {StateKey, StateMachine} from '@state-management/simple-state-machine';
 
 /**
  * Custom hook to subscribe to a specific state in the state machine.
