@@ -15,8 +15,8 @@ export const setupMockStateMachine = ({
         dispatch: dispatchImplementation
     };
 
-    jest.mock('simple-state-machine', () => {
-        const actual = jest.requireActual('simple-state-machine');
+    jest.mock('@state-management/simple-state-machine', () => {
+        const actual = jest.requireActual('@state-management/simple-state-machine');
         return {
             ...actual,
             StateMachine: {
