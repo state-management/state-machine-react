@@ -25,9 +25,13 @@ This project is part of the **state-management** suite, which includes:
 By decoupling state management logic from UI components, **state-machine-react** promotes cleaner, more maintainable, and testable React code.
 Since the state can be modified from within a Command only, this will result in business logic moving out of UI components into command classes.
 
+### Implementations Example
+- [Sample React project](https://github.com/state-management/react-example) that you can clone. It is a fully working example with unit tests, showcasing the use of `state-machine-react` wrapper.
+
 ---
 
 ## Features
+###### *State management code, that is lot less scary, easy to read, easy to trace, and very easy to change and unit test.*
 
 ### **Traceability**:
 This **single most important feature** that we wanted to design correctly is traceability of code.
@@ -38,7 +42,7 @@ This is invaluable while identifying issues in code.  This also reduces the depe
 
 ***Most importantly*** the state management code looks a lot less scary, it is easy to read, and it is very easy to change and unit test.
 
-### The Important Technical Features:
+### Important Technical Features:
 - **React Hooks**:
     - `fromState`: Subscribe to and observe changes in the global state.
     - `useDispatcher`: Dispatch commands to modify global state.  Commands contain the business logic.  And modify state as part of execution of business logic.
@@ -62,8 +66,6 @@ yarn add @state-management/state-machine-react
 ```
 
 ## Usage
-
-Here is a sample project that you can clone 
 
 ### StateKeys.constants.ts
 Create a constants file to store all state keys, for easy tracing of state changes in application
