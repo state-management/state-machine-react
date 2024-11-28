@@ -18,9 +18,9 @@ Managing state in React applications can often be complex and cumbersome, especi
 - Includes `setupMockStateMachine` to make unit testing with the state machine easier.
 
 This project is part of the **state-management** suite, which includes:
-- [simple-state-machine](https://github.com/state-management/simple-state-machine): The core state management library.
-- [state-machine-react](https://github.com/state-management/state-machine-react): The React wrapper for `simple-state-machine`.
-- [ngx-state-machine](https://github.com/state-management/ngx-state-machine): The Angular wrapper for `simple-state-machine`.
+- [simple-state-machine](https://www.npmjs.com/package/@state-management/simple-state-machine): The core state management library.
+- [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react): The React wrapper for `simple-state-machine`.
+- [ngx-state-machine](https://www.npmjs.com/package/@state-management/ngx-state-machine): The Angular wrapper for `simple-state-machine`.
 
 By decoupling state management logic from UI components, **state-machine-react** promotes cleaner, more maintainable, and testable React code.
 Since the state can be modified from within a Command only, this will result in business logic moving out of UI components into command classes.
