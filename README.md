@@ -25,8 +25,9 @@ This project is part of the **state-management** suite, which includes:
 By decoupling state management logic from UI components, **state-machine-react** promotes cleaner, more maintainable, and testable React code.
 Since the state can be modified from within a Command only, this will result in business logic moving out of UI components into command classes.
 
-### Implementation Example
-- [Sample React project](https://github.com/state-management/react-example) that you can clone. It is a fully working example with unit tests, showcasing the use of `state-machine-react` wrapper.
+### Implementation Examples
+- [Sample React Web App](https://github.com/state-management/react-example) that you can clone. It is a web app example with unit tests, showcasing the use of `state-machine-react` wrapper.
+- [Sample React Native Mobile App](https://github.com/state-management/ReactNativeExample) that you can clone. It is a React Native mobile app example with unit tests, showcasing the use of `state-machine-react` wrapper.
 
 
 ## Features
