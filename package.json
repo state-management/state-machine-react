@@ -1,6 +1,6 @@
 {
   "name": "@state-management/state-machine-react",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "React wrapper for simple-state-machine, provides fromState and useDispatcher hooks and unit test fixtures",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
