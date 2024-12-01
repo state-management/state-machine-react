@@ -35,8 +35,8 @@ Since the state can be modified from within a Command only, this will result in 
 
 ### **Traceability**:
 This **single most important feature** that we wanted to design correctly is traceability of code.
-When trying to identify an issue, we should be able to go through the code, and identify the block causing the issue, without having to open ten different files.
-We should be able to use the  IDE's "find references" or even the simple Find(Ctrl + F) feature to quickly identify what `StateKeys` are changed by which `Commands`.
+When trying to identify an issue, we should be able to go through the code, and identify the cause, without having to open ten different files.
+We should be able to use the IDE's "find references" or even the simple Find (Ctrl + F) feature to quickly identify what `StateKeys` are changed by which `Commands`.
 
 This is invaluable while identifying issues in code.  This also reduces the dependency on debugging tools and time spent in debugging.
 
