@@ -31,16 +31,16 @@
     "test": "jest --passWithNoTests"
   },
   "peerDependencies": {
-    "react": "^18.3.1"
+    "react": ">=17.0.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "jest": "^29.7.0",
+    "@types/react": "^17.0.0",
+    "jest": "^26.0.0",
     "typescript": "^4.0.0"
   },
   "dependencies": {
     "@state-management/simple-state-machine": "^1.0.11",
-    "@types/jest": "^27.5.2"
+    "@types/jest": "^26.0.0"
   },
   "keywords": [
     "state-management",
