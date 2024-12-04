@@ -54,6 +54,12 @@ This is invaluable while identifying issues in code.  This also reduces the depe
     - Leverage the powerful state management capabilities of `simple-state-machine` and its Command class which encapsulates the business logic, keeping the UI code clean.
 
 
+## Compatibility
+- This package has been tested with React versions 17.x through 18.x.
+- It is expected to work with newer React versions as well, but compatibility with versions beyond 18.x has not been explicitly verified.
+- For unit testing, this library supports Jest 26.x and higher.
+
+
 ## Installation
 
 To install this package, run:
