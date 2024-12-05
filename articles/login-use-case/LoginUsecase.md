@@ -1,28 +1,34 @@
-# State-Machine-React - Implementation / Readability / Maintenance.
+# Maintainable React Apps with State-Machine-React: A Login Use Case
 
-State management in a medium or large React application is a critical, and yet it is often complex, making the code difficult to follow, especially for new team members.
-Easy **Traceability** and Clean code is the most important aspect we focus on in the
-[state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react) package.  
+State management in medium to large React applications is critical but often complex, making the code difficult to follow, especially for new team members.
+Traceability and clean code are the core principles behind the [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react) package. This lightweight library for React and React Native is built on top of the TypeScript-based [simple-state-machine](https://www.npmjs.com/package/@state-management/simple-state-machine).  
 
-This is a lightweight library for react built on top of the [simple-state-machine](https://www.npmjs.com/package/@state-management/simple-state-machine) typescript library.
-We also have package for Angular built on top of the `simple-state-machine`
+For Angular users, we have [ngx-state-machine](https://www.npmjs.com/package/@state-management/ngx-state-machine), an Angular-specific package built on the same core library.
 
-Lets look into a example implementation of the simple login use case in a React application.
+Let's look into a simple login use case in a React application, to demonstrate how [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react) can help us write clean, maintainable, and testable state management code.
 
 We’ll explore how to:
 1. Separate reading of state from writing state updates. 
-2. Implement clean, testable code following the Atomic Design pattern. 
-3. Encapsulating application logic into Command objects, for example the login logic.
-4. And most importantly, verify that the code is easy to read, trace, understand, especially for new team members
+2. Implement clean, testable code.
+3. Encapsulate application logic into Command objects, for example the login logic in this case.
+4. Ensure the code is traceable, easy to understand, and not scary for the new team members.
+
+---
 
 ## Setup a new Project
-1. Create a react project. 
+1. Create a new React project. 
 2. Install React, [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react) libraries:
+```bash
+npx create-react-app login-example
+cd login-example
+npm install react @state-management/state-machine-react
+```
+And let's dive into the code.
 
 ## Implement the Code
 
 ### LoginPage.tsx
-![Annotated LoginPage Code](LoginCode.png)
+![Annotated LoginPage Code](LoginPage.png)
 <details>
 <summary style="color: royalblue; text-decoration: underline;">Expand to see the above code as plain text and to copy</summary>
 
@@ -191,4 +197,25 @@ export default App;
 - The example demonstrates a clear separation between reading/observing state and updating state:
     - The [LoginCommand](#LoginCommandts), dispatched from the [LoginPage](#LoginPagetsx), updates the state. Components dispatch commands to modify the state.
     - Multiple components, such as a `Header` or `App.tsx`, observe and read the state. These components handle UI updates in response to state changes.
+
+## Summary
+This article demonstrates how to effectively use the state-machine-react library to manage state in a React application. 
+By implementing a simple login flow, it illustrates key principles of state management.
+
+- Separation of Concerns: By keeping state updates within commands and state observation in components, the approach promotes clean code and enhances maintainability.
+- Encapsulation of Logic: Commands like, the LoginCommand encapsulates business logic, such as API calls and validations, ensuring the UI remains clean, modular, and easily testable.
+- Traceability / Predictability:  State Updates via Commands: Only commands, such as LoginCommand, can modify state using the putState method. This ensures state updates are centralized and follow a predictable flow.  You can easily trace the use a StakeKey everywhere in the application.
+- Type Safety: The use of StateKey<T> ensures type safety when observing or updating state, minimizing runtime errors and enhancing code reliability.
+
+This example provides a strong foundation for building scalable, maintainable React applications.
+
+You can explore the complete state-management suite, which includes:
+- [simple-state-machine](https://www.npmjs.com/package/@state-management/simple-state-machine): The core state management library in typescript.
+- [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react): The React wrapper for `simple-state-machine`.
+- [ngx-state-machine](https://www.npmjs.com/package/@state-management/ngx-state-machine): The Angular wrapper for `simple-state-machine`.
+
+And simpler implementation Examples
+- [Sample React Web App](https://github.com/state-management/react-example): A web app example with unit tests, showcasing the use of `state-machine-react` package.
+- [Sample React Native Mobile App](https://github.com/state-management/ReactNativeExample): A React Native mobile app example with unit tests, showcasing the use of `state-machine-react` package.
+- [Sample Angular Web App](https://github.com/state-management/angular-example): An Angular web app example with unit tests, showcasing the implementation of `simple-state-machine` using the `ngx-state-machine` package.
 
