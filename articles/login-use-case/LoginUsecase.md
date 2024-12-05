@@ -13,7 +13,6 @@ We’ll explore how to:
 3. Encapsulate application logic into Command objects, for example the login logic in this case.
 4. Ensure the code is traceable, easy to understand, and not scary for the new team members.
 
----
 
 ## Setup a new Project
 1. Create a new React project. 
