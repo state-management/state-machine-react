@@ -17,11 +17,13 @@ We’ll explore how to:
 ## Setup a new Project
 1. Create a new React project. 
 2. Install React, [state-machine-react](https://www.npmjs.com/package/@state-management/state-machine-react) libraries:
+
 ```bash
 npx create-react-app login-example
 cd login-example
 npm install react @state-management/state-machine-react
 ```
+
 And let's dive into the code.
 
 ## Implement the Code
